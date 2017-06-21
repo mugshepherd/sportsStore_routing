@@ -7,8 +7,7 @@
   <p>We'll ship your goods as soon as possible.</p>
   <!--<button class="btn btn-primary" routerLink="store">Return to Store</button>-->
   <!--TODO(3.5) From checkout, add routerLink attirbute - return to store link-->
-  <button class="btn btn-primary">Return to Store</button>
-
+  <button class="btn btn-primary" routerLink="store">Return to Store</button>
 </div>
 <form *ngIf="!orderSent" #form="ngForm" novalidate
       (ngSubmit)="submitOrder(form)" class="m-a-1">
@@ -63,7 +62,7 @@
   <div class="text-xs-center">
     <!--<button class="btn btn-secondary" routerLink="/cart">Back</button>-->
     <!--TODO(3.5) From checkout, add routerLink attirbute - return to cart link-->
-    <button class="btn btn-secondary">Back</button>
+    <button class="btn btn-secondary" routerLink="/cart">Back</button>
     <button class="btn btn-primary" type="submit">Complete Order</button>
   </div>
 </form>

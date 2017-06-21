@@ -8,12 +8,12 @@ import { CartSummaryComponent } from './cartSummary.component';
 import { CartDetailComponent } from './cartDetail.component';
 import { CheckoutComponent } from './checkout.component';
 // TODO(3.3) add supoprt for routerLink attribute by importing RouterModule - imports
-// import { RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   // TODO(3.3) add support for routerLink attribute by importing RouterModule - @NgModule
-  // imports: [ModelModule, BrowserModule, FormsModule, RouterModule],
-  imports: [ModelModule, BrowserModule, FormsModule],
+  imports: [ModelModule, BrowserModule, FormsModule, RouterModule],
+  // imports: [ModelModule, BrowserModule, FormsModule],
   declarations: [StoreComponent, CounterDirective, CartSummaryComponent, CartDetailComponent, CheckoutComponent],
   exports: [StoreComponent, CartDetailComponent, CheckoutComponent]
 })
