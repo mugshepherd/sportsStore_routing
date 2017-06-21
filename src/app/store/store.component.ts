@@ -3,7 +3,7 @@ import { Product } from '../model/product.model';
 import { ProductRepository } from '../model/product.repository';
 import { Cart } from '../model/cart.model';
 //TODO(2.1) - navigating though app: import router
-// import { Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'store',
@@ -18,7 +18,7 @@ export class StoreComponent {
   constructor(private repository: ProductRepository,
               private cart: Cart,
               // TODO(2.2) - navigating through app - add router to constructor
-              // private router: Router
+              private router: Router
   ) {}
   get products(): Product[] {
     let pageIndex = (this.selectedPage - 1) * this.productsPerPage;
@@ -44,7 +44,7 @@ export class StoreComponent {
   }
   addProductToCart(product: Product) {
     this.cart.addLine(product);
-    //TODO(3.1) Tie routes to actions - add router.navigateByURL
+    // TODO(3.1) Tie routes to actions - add router.navigateByURL
     // this.router.navigateByUrl('/cart');
   }
 
