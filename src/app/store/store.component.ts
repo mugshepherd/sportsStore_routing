@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Product } from '../model/product.model';
 import { ProductRepository } from '../model/product.repository';
 import { Cart } from '../model/cart.model';
-//TODO(2.1) - navigating though app: import router
+//TODO(3.0) - navigating though app: import router
 import { Router } from '@angular/router';
 
 @Component({
@@ -17,7 +17,7 @@ export class StoreComponent {
 
   constructor(private repository: ProductRepository,
               private cart: Cart,
-              // TODO(2.2) - navigating through app - add router to constructor
+              // TODO(3.0) - navigating through app - add router to constructor
               private router: Router
   ) {}
   get products(): Product[] {
